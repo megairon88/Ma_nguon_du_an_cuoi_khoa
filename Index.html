@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Game vuot chung ngai vat</title>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+</head>
+<body onload="docReady()">
+<canvas id="road" width="600" height="755"></canvas>
+<canvas id="centre_line" width="600" height="755"></canvas>
+<img id="car" src="images/car_resize.png" alt="Racing Car" style="position: absolute;
+     width: 100px;
+     height: 200px;
+     left: 25px;
+     top: 40px;">
+<div id="game_over">
+    <h3>Tro choi ket thuc</h3>
+    <input type="button" value="Chơi lại" onclick="RacingGameBoard.restart()">
+</div>
+<div id="game_start">
+    <h3>Bat dau tro choi</h3>
+    <input type="button" value="Chơi" onclick="RacingGameBoard.start()">
+</div>
+<div id="car_speed_area">
+    <h3>Toc Do</h3>
+    <text id="car_speed"></text>
+</div>
+<div id="instruction">
+    <h3>Guide</h3>
+    <ul>
+        <li>Di chuyen bang huong mui ten</li>
+        <li>Tang toc : W , Giam toc : S</li>
+        <li>Start : Enter</li>
+        <li>Quit : Esc</li>
+    </ul>
+</div>
+<div id="score_board">
+    <h3>Score</h3>
+    <text id="score">0</text>
+    <h3>High Score</h3>
+    <text id="high_score">0</text>
+</div>
+<script src="Car.js"></script>
+<script src="CentreLine.js"></script>
+<script src="Game.js"></script>
+<script src="Obstacle.js"></script>
+<script src="My.js"></script>
+</body>
